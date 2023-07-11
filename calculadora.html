@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casio fx-82MS</title>
+    <link rel="stylesheet" href="css/calculadora.css">
+</head>
+<body>
+    <div class="container">
+
+        <!--TOP CALCULATOR-->
+        <div id="casio" class="casio-fx82ms cubo">
+            <div class="brand-container">
+                <div class="brand">
+                    <div class="brand-span">
+                        <span class="brand-text1">CASIO</span>
+                        <span class="brand-text2">scientific calculator</span>
+                        <span class="model-text">fx-82MS</span>
+                    </div>
+                    <div class="sub-text">NATURAL DISPLAY</div>
+                </div>
+            </div>
+
+            <div class="screen">
+                <div class="lcd-container">
+                    <div id="lcd-background" class="lcd-background"><span class="arrow-right"></span><span class="arrow-left"></span></div>
+                    <div class="lcd-content"><span id="screen"></span></div>
+                    <div  class="lcd"><span id="result"></span></div>
+                </div>
+            </div>
+
+            <div class="setup-keypad">
+                <button id="shift"  title="SHIFT" data-primary="SHIFT"></button>
+                <button  title="ALPHA" data-primary="ALPHA"></button>
+                <div class="btn-big" >Replay<span class="left"></span><span class="right"></span> <span  class="top"></span> <span class="bottom"></span> </div>
+                <button  title="MODE" data-primary="MODE"></button>
+                <button id="on" title="ON" data-primary="ON"></button>
+            </div>
+        
+            <div class="scientific-keypad">
+
+                <div class="four-button">
+                    <div class="button" title="x!">x-1</div>
+                    <div class="button" title="nPr">nCr</div>
+                    <div class="button empty"></div>
+                    <div class="button empty"></div>
+                    <div class="button" title="Rec(  :">Pol(</div>
+                    <div class="button" title="3">x-3</div>
+                </div>
+
+                <div class="six-button">
+                    <div class="button" title="d/c">ab/c</div>
+                    <div class="button">¬</div>
+                    <div class="button">x-2</div>
+                    <div class="button" title="x">^</div>
+                    <div class="button" title="10x">log</div>
+                    <div class="button" title="ex e">in</div>
+
+                    <div class="button" title="A <--">(-)</div>
+                    <div class="button" title="B">.,,,</div>
+                    <div class="button" title="c">hyp</div>
+                    <div class="button" title="sin-1">sin</div>
+                    <div class="button" title="cos-1">cos</div>
+                    <div class="button" title="tan-1">tan</div>
+
+                    
+                    <div class="button" title="STO">RCL</div>
+                    <div class="button" title="<--">ENG</div>
+                    <div class="button">(</div>
+                    <div class="button" title="X">)</div>
+                    <div class="button" title="Y">,</div>
+                    <div class="button" title="M-">M+</div>
+                </div>
+            </div>
+
+
+
+
+            <div class="basic-keypad">
+
+                <button class="dark" title="7">7</button>
+                <button class="dark" title="8">8</button>
+                <button class="dark" title="9">9</button>
+                <button id="del" class="clear" title="DEL" data-primary="INS">DEL</button>
+                <button id="cls" class="clear" title="AC" data-primary="OFF">AC</button>
+               
+                <button class="dark" title="4">4</button>
+                <button class="dark" title="5">5</button>
+                <button class="dark" title="6">6</button>
+                <button class="dark" title="X">*</button>
+                <button class="dark" title="%">/</button>
+
+                <button class="dark" title="1" data-primary="S-SUM">1</button>
+                <button class="dark" title="2" data-primary="S-VAR">2</button>
+                <button class="dark" title="3">3</button>
+                <button class="dark" title="+">+</button>
+                <button class="dark" title="-">-</button>
+                
+                <button class="dark" title="0" data-primary="Rnd">0</button>
+                <button class="dark" title="." data-primary="RaN#">.</button>
+                <button id="exp" class="dark" title="EXP">EXP</button>
+                <button id="ans" class="dark" title="Ans" data-primary="DRG">Ans</button>
+                <button id="igual" class="dark" title="=" data-primary="%">=</button>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <div class="v"></div>
+
+
+    <script src="./js/calculadora.js"></script>
+</body>
+</html>
