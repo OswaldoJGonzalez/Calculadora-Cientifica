@@ -1,0 +1,595 @@
+@font-face {
+    font-family: ;
+    src: url();
+}
+*, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+
+}
+body{
+    background-color: chocolate;
+}
+button.active.focus,
+button.active:focus,
+button.focus,
+button.focus:active,
+button:active:focus,
+button:focus {
+  text-decoration: none;
+  outline: 0;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/********************************/
+
+.casio-fx82ms{
+    --casio-font: "Michroma", sans-serif;
+    --scientific-font: monospace;
+    --lcd-font: "DSEG7", monospace;
+    --width: 250px;
+    --height: 480px;
+    /*--esqueleto: 1px solid red;*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--width);
+    height: var(--height);
+    background-color: #3E4245;
+    padding-top: 5px;
+    background-image: linear-gradient(to right, #3E4245, #22262C,#151921,  #161920);
+
+}
+.cubo{
+    position: relative;
+    border-top: 8px solid #3a4356;
+    border-top-right-radius: 11px;
+    border-top-left-radius: 10px;
+    border-left: 7px solid #1e2431;
+    border-right: 7px solid #262e42;
+    border-radius: 13%/ 5%;
+}
+
+.casio-fx82ms::after{
+    content: '';
+    position: absolute;
+    height: 215px;
+    width: 250px;
+    top: 254px;
+    left: -7px;
+    border-right: 16px solid #656565;
+    border-left: 16px solid #656565;
+    border-top: 190px solid transparent;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+  
+   
+ }
+.casio-fx82ms .brand-container{
+    width: 218px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    border: var(--esqueleto);
+
+}
+
+.brand-container .brand{
+    width: 210px;
+    height: 62px;
+    font-family: var(--casio-font);
+    height: 65px;
+    color: #FEFEFE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.brand .brand-span{
+    display: grid;
+    grid-template-columns: 83px 70px 45px;
+    align-items: center;
+}
+
+.brand-span .brand-text1{
+    font-size: 13px;
+    font-family: var(--casio-font);
+    font-weight: bold;
+
+}
+
+.brand-span .brand-text2{
+    font-family: var(--casio-font);
+    font-size: 5px;
+    text-transform: uppercase;
+}
+
+.brand-span .model-text{
+    font-family: var(--scientific-font);
+    font-size: 10px;
+    font-style: italic;
+}
+.brand .sub-text{
+    font-family: var(--scientific-font);
+    color: #38A486;
+    font-size: 10px;
+
+}
+/********************************/
+
+
+
+
+/********************************/
+            /*SCREEN*/
+/********************************/
+
+.screen{
+    height: 100px;
+
+}
+.screen .lcd-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.lcd-container .lcd-background{
+    position: relative;
+    width: 197px;
+    height: 100px;
+    /*background-color: #D5EBD1;*/
+    background-color: #456F6D;    
+    text-align: center;
+    text-indent: .1em;
+    border-bottom: 15px solid #383B44;
+    border-top: 5px solid #050607;
+    border-radius: 50% / 10%;
+}
+.lcd-container .lcd-background::before{
+    content: '';
+    position: absolute;
+    width: 197px;
+    height: 86px;
+    top: 2px;
+    left: -10px;
+    border-left: 10px solid #000000;
+    border-right: 10px solid #383B44;
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 14px;
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 14px;  
+}
+.lcd-background .arrow-right{
+    display: none;
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 7px;
+    border-top: 2px solid transparent;
+    border-left: 4px solid black;
+    border-bottom: 2px solid transparent;
+}
+.lcd-background .arrow-left{
+    display: none;
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    border-top: 2px solid transparent;
+    border-right: 4px solid black;
+    border-bottom: 2px solid transparent;
+}
+
+
+
+.lcd{
+    position: absolute;
+    bottom: 15px;
+    width: 90%;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+    overflow-y: hidden;
+    overflow-x: scroll;;
+
+}
+.lcd-content{
+    position: absolute;
+    top: 8px;
+    width: 90%;
+    height: 30px;
+    text-align: left;
+    line-height: 30px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin: auto;
+}
+
+
+.lcd span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.lcd-content input{
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    z-index: 116;
+
+}
+.lcd-content::-webkit-scrollbar{
+    display: none;
+}
+.lcd::-webkit-scrollbar{
+    display: none;
+}
+/********************************/
+
+
+
+
+/********************************/
+            /*SETUP KEYPAD*/
+/********************************/
+.setup-keypad{
+    width: 218px;
+    height: 66px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    border: var(--esqueleto);
+}
+.setup-keypad button{
+    width: 30px;
+    height: 17px;
+    border-radius: 50px;
+    background-color: #6273AE;
+    border: 1px solid #3E4245;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+.setup-keypad button:active{
+    background-color: #7a8dd0 !important;
+}
+.setup-keypad button:hover{
+    background-color: #525d80;
+}
+.setup-keypad button::after{
+    content: attr(data-primary);
+    position: absolute;
+    font-size:var(--casio-font) ;
+    font-size: 6px;
+    width: 28px;
+    left: 0;
+    top: -8px;
+    font-weight: bold;
+}
+.setup-keypad button:nth-child(1){
+    color: #9F8D59 !important;
+    top: -4px;
+}
+.setup-keypad button:nth-child(2){
+    color: #966576 !important;
+}
+.setup-keypad .btn-big:nth-child(3){
+    color: #24366D !important;
+    font-size: 8px;
+    line-height: 60px;     
+}
+
+.setup-keypad .btn-big:nth-child(3)::before{
+    content: '';
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #424C7B;
+    top: 7px;
+    left: 7px;
+    border-radius: 50%;
+}
+.setup-keypad button:nth-child(4){
+    color: #B4B27A !important;
+}
+.setup-keypad button:nth-child(5){
+    color: #C2C3C4 !important;
+    top: -4px;
+}
+
+.btn-big{
+    width: 60px;
+    height: 60px;
+    color: black;
+    margin-left: 2px;
+    margin-right: 4px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    background-color: #6273AE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 113; 
+    border-radius: 50% ;
+    text-align: center;
+    font-size: 8px;
+    line-height: 45px;
+}
+
+
+/********************************/
+
+
+
+
+
+/********************************/
+        /*scientific-keypad*/
+/********************************/
+
+.scientific-keypad{
+    width: 218px;
+}
+.scientific-keypad .four-button{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    position: relative;
+    top: -11px;
+    border: var(--esqueleto);
+}
+
+
+.four-button button{
+    width: 30px;
+    height: 17px;
+    background-color: #212534;
+    color: white;
+    border-radius: 50px;
+    margin-top: 5px;
+    border:1px solid #1f1f1d;
+    font-size: 10px;
+    text-align: center;
+    line-height: 17px;
+    position: relative;
+    cursor: pointer;
+}
+.four-button button:active{
+    background-color: #384d52 !important;
+}
+.four-button button:hover{
+    background-color: #32383a ;
+}
+.four-button button::after{
+    content: attr(data-primary);
+    position: absolute;
+    font-size:var(--casio-font);
+    font-size: 8px;
+    left: 5px;
+    top: -16px;
+    font-weight: bold;
+    text-align: center;
+    color: #CDA369
+ }
+
+.empty{
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.scientific-keypad .btn__fx3{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    border: var(--esqueleto);
+}
+
+.btn__fx3 button{
+    position: relative;
+    width: 30px;
+    height: 17px;
+    background-color: #212534;
+    color: white;
+    border-radius: 50px;
+    margin-left: 2px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border:1px solid #1f1f1d;
+    font-size: 9px;
+    text-align: center;
+    line-height: 17px;
+    z-index: 115;
+    cursor: pointer;
+
+}
+.scientific-keypad button:active{
+    background-color: #384d52 !important;
+}
+.scientific-keypad button:hover{
+    background-color: #32383a ;
+}
+.btn__fx3 button::after{
+    content: attr(data-primary);
+    position: absolute;
+    font-size:var(--casio-font);
+    font-size: 8px;
+    left: 5px;
+    top: -15px;
+    font-weight: bold;
+    text-align: center;
+    color: #CDA369
+ }
+/********************************/
+
+
+
+
+
+
+ 
+/********************************/
+        /*basic-keypad*/
+/********************************/
+.basic-keypad{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    border: var(--esqueleto);
+    width: 218px;
+    margin-top: 2px;
+    z-index: 114;
+}
+.basic-keypad button{ 
+    width: 35px;
+    height: 20px;
+    color: white;
+    border-radius: 50px;
+    margin-left: 2px;
+    margin-bottom: 10px;
+    border:1px solid #1f1f1d;
+    font-size: 10px;
+    text-align: center;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.basic-keypad button:active{
+    background-color: #384d52 !important;
+}
+.basic-keypad button:hover{
+    background-color: #32383a ;
+}
+.basic-keypad button::after{
+    content: attr(data-primary);
+    position: absolute;
+    font-size:var(--casio-font);
+    font-size: 7px;
+    left: 0;
+    top: -15px;
+    width: 35px;
+    font-weight: bold;
+    text-align: center;
+    color: #CDA369
+ }
+
+ .basic-keypad button:nth-child(9){
+     font-size: 9px;
+     line-height: 20px;
+   }
+   .basic-keypad button:nth-child(15){
+    font-size: 16px;
+  }
+  .basic-keypad button:nth-child(17){
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+/********************************/
+
+
+.rotate-5{transform: rotate(5deg);}
+.rotate--5{transform: rotate(-5deg);}
+.dark{background-color: #202425;}
+.clear{background-color: #68384B;}
+
+/********************************/
+            /*CIRCLE*/
+/********************************/
+.left{
+    position: absolute;
+    top: 26px;
+    left: 2px;
+    width: 0px;
+    height: 0px;
+    border-top: 4px solid #6273AE;
+    border-right: 4px solid #272F66;
+    border-bottom: 4px solid #6273AE;
+    cursor: pointer;
+}
+.right{
+    position: absolute;
+    top: 26px;
+    right: 2px;
+    width: 0px;
+    height: 0px;
+    border-top: 4px solid #6273AE;
+    border-left: 4px solid #272F66;
+    border-bottom: 4px solid #6273AE;
+    cursor: pointer;
+}
+.top{
+    position: absolute;
+    top: 2px;
+    left: 26px;
+    width: 0px;
+    height: 0px;
+    border-bottom: 4px solid #272F66;
+    border-left: 4px solid #6273AE;
+    border-right: 4px solid #6273AE;
+    cursor: pointer;
+}
+.bottom{
+    position: absolute;
+    bottom: 2px;
+    left: 26px;
+    width: 0px;
+    height: 0px;
+    border-top: 4px solid #272F66;
+    border-left: 4px solid #6273AE;
+    border-right: 4px solid #6273AE;
+    cursor: pointer;
+}
+.left:active{
+    border-top: 4px solid #6273AE;
+    border-right: 4px solid #7a8dd0 !important;
+    border-bottom: 4px solid #6273AE;
+}
+.left:hover{
+    border-top: 4px solid #6273AE;
+    border-right: 4px solid #525d80;
+    border-bottom: 4px solid #6273AE;
+}
+.right:active{
+    border-top: 4px solid #6273AE;
+    border-left: 4px solid #7a8dd0  !important;
+    border-bottom: 4px solid #6273AE;
+}
+.right:hover{
+    border-top: 4px solid #6273AE;
+    border-left: 4px solid #525d80  ;
+    border-bottom: 4px solid #6273AE;
+}
+.top:active{
+    border-bottom: 4px solid #7a8dd0  !important;
+    border-left: 4px solid #6273AE;
+    border-right: 4px solid #6273AE;
+}
+.top:hover{
+    border-bottom: 4px solid #525d80;
+    border-left: 4px solid #6273AE;
+    border-right: 4px solid #6273AE;
+}
+.bottom:active{
+    border-top: 4px solid #7a8dd0 !important;
+    border-left: 4px solid #6273AE;
+    border-right: 4px solid #6273AE;
+}
+.bottom:hover{
+    border-top: 4px solid #525d80 ;
+    border-left: 4px solid #6273AE;
+    border-right: 4px solid #6273AE;
+}
+/********************************/
